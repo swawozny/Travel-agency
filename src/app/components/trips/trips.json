@@ -1,0 +1,91 @@
+[
+    {
+      "id": 0,
+      "name": "Viva Iberia",
+      "destination": "Hiszpania",
+      "startDate" : "2020-04-30",
+      "endDate" : "2020-05-10",
+      "price" : 1280,
+      "maxPlaces" : 4,
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." ,
+      "image" : "https://i.content4travel.com/cms/img/u/desktop/se/xesviva_0.jpg?version=2.5.352"
+    },
+    {
+      "id": 1,
+      "name": "Toskańska przygoda",
+      "destination": "Włochy",
+      "startDate" : "2020-05-29",
+      "endDate" : "2020-06-09",
+      "price" : 2580,
+      "maxPlaces" : 14,
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." ,
+      "image" : "https://i.content4travel.com/cms/img/u/desktop/se/xittosp_0.jpg?version=2.5.352"
+    },
+    {
+      "id": 2,
+      "name": "Klasyczne Włochy",
+      "destination": "Włochy",
+      "startDate" : "2020-03-28",
+      "endDate" : "2020-05-10",
+      "price" : 980,
+      "maxPlaces" : 1,
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." ,
+      "image" : "https://i.content4travel.com/cms/img/u/desktop/se/xitklas_0.jpg?version=2.5.352"
+    },
+    {
+      "id": 3,
+      "name": "Rabat na Berbera",
+      "destination": "Maroko",
+      "startDate" : "2020-04-23",
+      "endDate" : "2020-05-21",
+      "price" : 3280,
+      "maxPlaces" : 2,
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." ,
+      "image" : "https://i.content4travel.com/cms/img/u/desktop/se/agaraba_0.jpg?version=2.5.352"
+    },
+    {
+      "id": 4,
+      "name": "Spacer po Rzymie",
+      "destination": "Włochy",
+      "startDate" : "2020-04-30",
+      "endDate" : "2020-05-10",
+      "price" : 12802,
+      "maxPlaces" : 21,
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." ,
+      "image" : "https://i.content4travel.com/cms/img/u/desktop/se/romspac_0.jpg?version=2.5.352"
+    },
+    {
+      "id": 5,
+      "name": "W rytmie flamenco",
+      "destination": "Hiszpania",
+      "startDate" : "2020-04-03",
+      "endDate" : "2020-05-10",
+      "price" : 2280,
+      "maxPlaces" : 14,
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." ,
+      "image" : "https://i.content4travel.com/cms/img/u/desktop/se/agpanda_0.jpg?version=2.5.352"
+    },
+    {
+      "id": 6,
+      "name": "Orient Express",
+      "destination": "Turcja",
+      "startDate" : "2020-04-13",
+      "endDate" : "2020-05-10",
+      "price" : 1530,
+      "maxPlaces" : 9,
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." ,
+      "image" : "https://i.content4travel.com/cms/img/u/desktop/se/aytorex_0.jpg?version=2.5.352"
+    },
+    {
+      "id": 7,
+      "name": "Chorwacka lista",
+      "destination": "Chorwacja",
+      "startDate" : "2020-02-15",
+      "endDate" : "2020-03-01",
+      "price" : 1390,
+      "maxPlaces" : 6,
+      "description" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." ,
+      "image" : "https://i.content4travel.com/cms/img/u/desktop/se/xhrlisn_0.jpg?version=2.5.352"
+    }
+  ]
+

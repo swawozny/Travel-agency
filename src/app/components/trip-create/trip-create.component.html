@@ -1,0 +1,134 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<div class="container" [hidden]="submitted">
+    <form class="col-sm-12 panel panel-default" [formGroup]="modelForm" (ngSubmit)="onSubmit()">
+        <h2 style="border-bottom: 1px solid darkgray;">Add new trip</h2>
+
+        <div class="form-group">
+            <label for="example-text-input">Name</label>
+            <input class="form-control" name="name" formControlName="name" required [(ngModel)]="trip.name" placeholder="Enter name" id="example-text-input" type="example-text-input">
+            <div *ngIf="name.errors && name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+                 <div *ngIf="name.errors.required">
+                     Name is required.
+                    </div>
+                    <div *ngIf="name.errors.minlength">
+                        Name must be at least 1 characters long.
+                    </div>
+                    <div *ngIf="name.errors.pattern">
+                        Name must be a string!
+                       </div>
+                </div>
+            </div>
+
+        <div class="form-group">
+            <label for="example-text-input">Destination</label>
+            <input class="form-control" name="destination" formControlName="destination" required [(ngModel)]="trip.destination" placeholder="Enter destination" id="example-text-input" type="example-text-input">
+            <div *ngIf="destination.errors && destination.invalid && (destination.dirty || destination.touched)" class="alert alert-danger">
+                <div *ngIf="destination.errors.required">
+                    Destination is required.
+                   </div>
+                   <div *ngIf="destination.errors.minlength">
+                    Destination must be at least 1 characters long.
+                   </div>
+                   <div *ngIf="destination.errors.pattern">
+                    Destination must be string!
+                   </div>
+               </div>
+           </div>
+        
+
+        <div class="form-group">
+            <label for="id">Start Date</label>
+            <input class="form-control" name="startDate" formControlName="startDate" required [(ngModel)]="trip.startDate" placeholder="Enter startDate" id="startDate" type="date" value="2020-12-06" id="example-date-input">
+            <div *ngIf="startDate.errors && startDate.invalid && (startDate.dirty || startDate.touched)" class="alert alert-danger">
+                <div *ngIf="startDate.errors.required">
+                    startDate is required.
+                </div>
+               </div>
+           </div>
+         
+
+        <div class="form-group">
+            <label for="id">End Date:</label>
+            <input class="form-control" name="endDate" formControlName="endDate" required [(ngModel)]="trip.endDate" placeholder="Enter endDate" id="endDate" type="date" value="2020-12-06" id="example-date-input">
+            <div *ngIf="endDate.errors && endDate.invalid && (endDate.dirty || endDate.touched)" class="alert alert-danger">
+                <div *ngIf="endDate.errors.required">
+                    endDate is required.
+                   </div>
+               </div>
+           </div>
+        
+
+        <div class="form-group">
+            <label for="example-number-input">Price</label>
+            <input class="form-control" name="price" formControlName="price" required [(ngModel)]="trip.price" placeholder="Enter price" id="example-number-input" type="example-number-input">
+            <div *ngIf="price.errors && price.invalid && (price.dirty || price.touched)" class="alert alert-danger">
+                <div *ngIf="price.errors.required">
+                    Price is required.
+                   </div>
+                   <div *ngIf="price.errors.minlength">
+                    Price must be at least 1 characters long.
+                   </div>
+                   <div *ngIf="price.errors.pattern">
+                    Price must be number!
+                   </div>
+               </div>
+           </div>
+       
+
+        <div class="form-group">
+            <label for="example-number-input">Max Places</label>
+            <input class="form-control" name="maxPlaces" formControlName="maxPlaces" required [(ngModel)]="trip.maxPlaces" placeholder="Enter maxPlaces" id="example-number-input" type="example-number-input">
+            <div *ngIf="maxPlaces.errors && maxPlaces.invalid && (maxPlaces.dirty || maxPlaces.touched)" class="alert alert-danger">
+                <div *ngIf="maxPlaces.errors.required">
+                    MaxPlaces is required.
+                   </div>
+                   <div *ngIf="maxPlaces.errors.minlength">
+                    MaxPlaces must be at least 1 characters long.
+                   </div>
+                   <div *ngIf="maxPlaces.errors.pattern">
+                    maxPlaces must be number!
+                   </div>
+               </div>
+           </div>
+        
+
+        <div class="form-group">
+            <label for="example-text-input">Description</label>
+            <input class="form-control" name="description" formControlName="description" required [(ngModel)]="trip.description" placeholder="Enter description" id="example-text-input" type="example-text-input">
+        </div>
+        <div *ngIf="description.errors && description.invalid && (description.dirty || description.touched)" class="alert alert-danger">
+            <div *ngIf="description.errors.required">
+                Description is required.
+               </div>
+               <div *ngIf="description.errors.minlength">
+                Description must be at least 4 characters long.
+               </div>
+           </div>
+       
+
+        <div class="form-group">
+            <label for="example-url-input">Image URL </label>
+            <input class="form-control" name="image" formControlName="image" required [(ngModel)]="trip.image" placeholder="Enter ImageURL" id="example-url-input" type="example-url-inputL">
+            <div *ngIf="image.errors && image.invalid && (image.dirty || image.touched)" class="alert alert-danger">
+                <div *ngIf="image.errors.required">
+                    ImageURL is required.
+                   </div>
+                   <div *ngIf="image.errors.minlength">
+                    ImageURL must be at least 8 characters long.
+                   </div>
+               </div>
+           </div>
+        
+
+      <button type="submit" [disabled]="modelForm.invalid" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+
+  <div [hidden]="!submitted">
+    <h4>Wycieczka została dodana prawidłowo</h4>
+    <button class="btn btn-success" (click)="newTrip()">Dodaj</button>
+  </div>

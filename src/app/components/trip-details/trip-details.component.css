@@ -1,0 +1,150 @@
+
+.price {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background-color: #464646;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 25px;
+  }
+
+  .mat-card{
+    padding: 2%;
+    margin-top:0;
+  }
+  
+  .places{
+    border-top: 1px solid rgb(216, 216, 216);
+    border-bottom: 1px solid rgb(216, 216, 216);
+    color: black;
+    background-color: #ffffff;
+    outline: 0;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+
+  img {
+      max-width: 100%;
+    border-radius: 0%;
+
+  }
+
+
+  p {
+      margin:1%;
+  }
+
+  .btn {
+    background-color: rgb(209, 49, 49);
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    float:left;
+    margin: 2%;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: rgb(255, 103, 103);
+  }
+
+  .btn2 {
+    background-color: rgb(0, 158, 13);
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    float:left;
+    margin: 2%;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn2:hover {
+    background-color: rgb(113, 155, 89);
+  }
+
+  .btn3 {
+    background-color: rgb(0, 95, 158);
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    float:left;
+    margin: 2%;
+  }
+  
+  /* Darker background on mouse-over */
+  .btn3:hover {
+    background-color: rgb(53, 179, 196);
+  }
+
+.btn:disabled,
+.btn[disabled], .btn2:disabled,
+.btn2[disabled], .btn3:disabled,
+.btn3[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+
+.content {
+  padding: 16px;
+}
+
+.content > mat-card {
+  width: 200px;
+}
+
+.alert {
+  padding: 20px;
+  background-color: red; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+
+.lowest-trip {
+  background-color: red;
+}
+
+.highest-trip {
+  background-color: green;
+}

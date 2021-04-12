@@ -1,0 +1,79 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="100%">
+      <mat-card class="mat-elevation-z4" 
+      [ngClass]="{'high-amount-of-books' : bookedTrips > 10, 'low-amount-of-books' : bookedTrips <= 10}">
+        <mat-card-content>
+          <h1>Booked trips: {{bookedTrips}}</h1>
+        </mat-card-content>
+      </mat-card>
+    
+  </div>
+    </div>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+  <div class="col-lg-12 col-sm-12">
+      <span class="title">FILTROWANIE</span>
+  </div>
+<div class="col-lg-12 col-sm-12 hero-feature">
+  <div class="table-responsive">
+    <table class="table table-bordered tbl-cart">
+        <thead>
+            <tr>
+                <td>Destination Name</td>
+                <td>MinPrice</td>
+                <td>MaxPrice</td>
+                <td>Start Date</td>
+                <td>End Date</td>
+                <td>Stars</td>
+            </tr>
+        </thead>
+        <tbody>
+          <td> <input [(ngModel)]="searchText0" placeholder="Destination Name"></td>
+          <td> <input [(ngModel)]="minPrice" placeholder="Min Price"></td>
+          <td><input [(ngModel)]="maxPrice" placeholder="Max Price"></td>
+          <td><input [(ngModel)]="minDate" placeholder="Enter startDate" type="date" value="2020-12-06" id="example-date-input"></td>
+    <td><input [(ngModel)]="maxDate" placeholder="Enter endDate" type="date" value="2020-12-06" id="example-date-input"></td>
+    <td>
+      <select [(ngModel)]="stars">
+        <option></option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+      </td>
+  </tbody>
+    </table>
+</div>
+</div>
+</div>
+
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let trip of tripsList | filterByDestination: searchText0 | filterByPrice: minPrice: maxPrice | filterByDate: minDate: maxDate | filterByStars: stars">
+     <app-trip 
+     [t] = "trip"
+     [isHighest] = "trip.key ===highPriceTripId"
+     [isLowest] = "trip.key == lowPriceTripId"
+     [noPlaces] = "trip.freePlaces == 0"
+     [allPlacesReserved] = "trip.freePlaces == trip.maxPlaces"
+     [lowAmountOfPlaces] = "trip.freePlaces <= 3 && trip.freePlaces > 0"
+     (reserveTrip) = "reserveTrip(trip)"
+     (removeTripReservation) = "removeTripReservation(trip)"
+     [tripFreePlaces] = "trip.freePlaces"
+     [tripStars] = "trip.stars"
+     (rateTrip) = rateTrip(trip,$event)
+     >
+        
+     </app-trip>
+    </div>
+  </div>
+  </div>

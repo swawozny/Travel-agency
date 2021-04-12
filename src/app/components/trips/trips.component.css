@@ -1,0 +1,13 @@
+.high-amount-of-books {
+    background-color: green;
+}
+
+.low-amount-of-books {
+    background-color: red;
+}
+
+
+.filter {
+    text-align: center;
+    margin: 30px;
+}
